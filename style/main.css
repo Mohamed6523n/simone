@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*############# Reset #############*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+:root {
+    --main-color: rgb(32, 201, 151);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+    color: #333;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    padding: 0px 2rem;
+    margin: auto;
+}
+
+@media screen and(min-width:540px) {
+    .container {
+        width: 540px;
+
+    }
+
+}
+
+@media screen and(min-width:768px) {
+    .container {
+        width: 720px;
+    }
+
+}
+
+@media screen and(min-width:992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media screen and(min-width:1200px) {
+    .container {
+        width: 1140px;
+
+    }
+
+}
+
+@media screen and(min-width:1400px) {
+    .container {
+        width: 1320px;
+
+    }
+
+}
+
+.titel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 70px 0;
+}
+
+.titel p {
+    font-size: 2rem;
+    position: absolute;
+    color: #000;
+}
+
+.titel p::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+
+    width: 100px;
+    height: 2px;
+    background: var(--main-color);
+}
+
+.titel h2 {
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    font-size: 120px;
+}
+
+/* nav */
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: o;
+    padding: 20px 0;
+    color: white;
+    background: #000;
+    z-index: 999;
+}
+
+.nav-bar .container {
+    display: flex;
+}
+
+.nav-bar .nav-menu {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.nav-bar .nav-menu li {
+    padding: 10px 15px;
+}
+
+/* ======== landing */
+
+.landing {
+    color: white;
+    background-image: url(../images/home.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.landing .container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.landing-layer {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.landing .container p {
+    padding: 20px 0;
+
+}
+
+.landing .container a {
+    display: inline-block;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 25px 0;
+
+    transition: 0.5s;
+}
+
+.landing .landing-text {
+    margin: auto 0;
+}
+
+.landing .container a:hover {
+    color: white;
+    background: var(--main-color);
+    border-color: white;
+}
+
+.landing .container {
+    font-size: 30px;
+}
+
+.landing .landing-icon {
+    font-size: 2.5rem;
+    position: relative;
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+}
+
+
+/* ================= about */
+
+.about {
+    padding: 70px 0;
+}
+
+.about-area {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 70px 0;
+}
+
+.about-area .about-info {
+    width: 30%;
+}
+
+.about-area .about-info a {
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    margin: 20px 30px;
+    display: inline-block;
+    padding: 12px 20px;
+    transition: 0.5s;
+}
+
+.about-area .about-info a:hover {
+    background: var(--main-color);
+    color: white;
+
+
+}
+
+.about-area .about-info li {
+
+    font-size: 18px;
+    padding: 10px 20px;
+    border-bottom: 1px dashed rgb(153, 153, 153);
+}
+
+.about-area .about-info span {
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 800;
+}
+
+.about-area .about-text {
+    width: 50%;
+}
+
+.about-area .about-text h3 {
+    font-size: 2rem;
+
+}
+
+.about-area .about-text p {
+    padding: 20px 0;
+}
+
+.about-area .about-text span {
+    color: var(--main-color);
+}
+
+
+.about .counter {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.border-right {
+    border-right: 1px dashed rgb(153, 153, 153);
+}
+
+
+.about .counter .item {
+    color: rgb(153, 153, 153);
+    padding: 30px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+
+/*  === services-area */
+.services {
+    padding: 70px 0;
+}
+
+.services .colom {
+    font-size: 20px;
+    display: flex;
+    padding: 16px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.services .colom .services-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 40%;
+}
+
+.services .colom .services-item span {
+    padding: 30px;
+    background: #fff;
+    margin: 10px;
+    box-shadow: 0 0 5px rgb(153, 153, 153);
+    color: var(--main-color);
+}
+
+.resume {
+    padding: 70px 0;
+}
+
+.resume-area {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.resume .resume-area .item {
+    width: calc((100% - 30px) / 2);
+    border: 1px rgb(153, 153, 153) solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.resume .resume-area .item span {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+
+.resume .resume-area .item p.text-color {
+    padding: 10px 0;
+    color: tomato;
+    font-size: 14px;
+}
+
+.resume .skils {
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.resume .skils h2 {
+    padding: 30px 0;
+}
+
+.resume .skils a {
+    border: 2px black solid;
+    padding: 10px 20px;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.resume .skils a:hover {
+    background: #000;
+    color: white;
+}
+
+.resume .skils-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+
+}
+
+.resume .skils-area .item {
+    width: 50%;
+}
+
+.resume .skils-area .item .text {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.resume .skils-area .item .progresc {
+    width: 98%;
+    height: 10px;
+    background: gray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.resume .skils-area .item .inner-progresc {
+    height: inherit;
+    background-color: var(--main-color);
+
+}
+
+/* portfolio */
+.portfolio {
+    padding: 70px 0;
+
+}
+
+.portfolio .portfolio-area {
+    padding: 40px 0;
+}
+
+.portfolio .portfolio-area ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .portfolio-area ul li {
+    padding: 20px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.portfolio .portfolio-area ul li:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.active {
+    color: var(--main-color);
+    position: relative;
+}
+
+
+.galler {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.galler .item {
+    width: calc((100% - 30px) /3);
+    padding: 10px;
+}
+
+.galler .item .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.galler .item .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.galler .item .image:hover .layer {
+    opacity: 1;
+
+}
+
+.galler .item .image img {
+    transition: .5s .5s;
+}
+
+.galler .item .image:hover img {
+    transform: scale(1.4, 1.4);
+}
+
+
+
+
+/* testmonial */
+
+.clinte-section {
+    padding: 70px 0;
+}
+
+.clinte-section .clinte-area {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.clinte-section .clinte {
+    width: calc((100% - 30px) / 2);
+    background: rgb(243, 241, 241);
+    padding: 50px;
+}
+
+.clinte-section .clinte-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.clinte-section .clinte-info img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.clinte-section .clinte-text ul {
+    display: flex;
+    gap: 15px;
+    color: gold;
+
+}
+
+.clinte-section .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 70px 0;
+
+}
+
+
+
+.clinte-section .bullets span {
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.clinte-section .bullets span:hover {
+    outline: 2px var(--main-color) solid;
+    outline-offset: 5px;
+    cursor: pointer;
+    background: var(--main-color);
+
+}
+.clinte-section .bullets span.activs {
+    width: 20px;
+    outline: 2px var(--main-color) solid;
+    outline-offset: 5px;
+    height: 20px;
+    background: var(--main-color);
+    border-radius: 50%;
+}
