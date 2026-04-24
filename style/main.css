@@ -571,6 +571,9 @@ a {
 }
 /* ========================================== */
 
+
+    justify-content: space-between;
+
 .contact-us {
     padding: 70px 30px;
     background: rgb(247, 249, 250);
